@@ -1,17 +1,47 @@
-# shop_app
+#  Shops App
 
-A new Flutter project.
+A Flutter technical assessment app that displays a list of grocery stores using the provided API.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Display shops list
+- Shop card includes:
+  - Cover photo
+  - Shop name
+  - Shop description
+  - Estimated delivery time
+  - Minimum order
+  - Location
+  - Availability badge
+- Debounced search by name or description
+- Sort by ETA (ascending)
+- Sort by minimum order (ascending)
+- Filter between **All** and **Open only**
+- Clear filters
+- Loading, error, and no-results states
+- Pull to refresh
+- Light / dark mode
 
-A few resources to get you started if this is your first Flutter project:
+## Architecture
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+This project uses:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Flutter Bloc / Cubit** for state management
+- **Repository pattern**
+- **Dio** for networking
+- **GetIt** for dependency injection
+- **GoRouter** for routing
+
+The structure is feature-based and separated into:
+
+- `core`
+- `features/shops/data`
+- `features/shops/presentation`
+
+## Setup Instructions
+
+### 1. Clone the project
+
+
+git https://github.com/ramishaya/Shop-App.git
+cd shop_app

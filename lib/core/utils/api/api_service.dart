@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 
 class ApiService {
   final Dio _dio;
-  //final String _baseUrl = 'https://api.orianosy.com/';
+  static const String _baseUrl = 'https://api.orianosy.com/';
 
   ApiService(this._dio);
 
@@ -14,7 +14,9 @@ class ApiService {
     final response = await _dio.get(
       '$_baseUrl$endpoint',
       queryParameters: queryParameters,
-      options: Options(headers: headers),
+      options: Options(
+        headers: headers,
+      ),
     );
 
     return response.data;
